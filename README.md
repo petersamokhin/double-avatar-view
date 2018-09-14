@@ -3,6 +3,8 @@ Instagram-like double avatar view with cropping
 
 <img src="https://petersamokhin.com/files/projects/doubleavatar/demo.gif" width="402" height="705" />
 
+Demo APK: https://petersamokhin.com/files/projects/doubleavatar/dav.apk
+
 # Install
 
 1. Add `jitpack` repo to your project-level `build.gradle`:
@@ -24,6 +26,7 @@ dependencies {
 See last version: https://github.com/petersamokhin/double-avatar-view/releases
 
 # Usage
+
 Configure view in your xml layout file:
 
 ```xml

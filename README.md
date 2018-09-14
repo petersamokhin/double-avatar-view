@@ -1,4 +1,4 @@
 # double-avatar-view
 Instagram-like double avatar view with cropping
 
-![](https://petersamokhin.com/files/projects/doubleavatar/demo.gif =402x705)
+<img src="https://petersamokhin.com/files/projects/doubleavatar/demo.gif" width="402" height="705" />

@@ -5,11 +5,11 @@ Instagram-like double avatar view with cropping
 
 # Install
 
-1. Add line below to your project-level `build.gradle`:
+1. Add `jitpack` repo to your project-level `build.gradle`:
 ```groovy
 allprojects {
 		repositories {
-			// other repositories
+			// other repos
 			maven { url 'https://jitpack.io' }
 		}
 	}
@@ -18,7 +18,7 @@ allprojects {
 2. Add library to your dependencies:
 ```groovy
 dependencies {
-		implementation 'com.github.petersamokhin:double-avatar-view:$ACTUAL_VERSION'
-	}
+    implementation 'com.github.petersamokhin:double-avatar-view:$ACTUAL_VERSION'
+}
 ```
 See last version: https://github.com/petersamokhin/double-avatar-view/releases

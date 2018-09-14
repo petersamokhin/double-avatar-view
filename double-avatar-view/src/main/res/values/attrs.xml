@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DoubleAvatarView">
+        <attr name="horizontal_offset" format="float" />
+        <attr name="vertical_offset" format="float" />
+        <attr name="second_size_coeff" format="float" />
+        <attr name="cut_size_coeff" format="float" />
+    </declare-styleable>
+</resources>

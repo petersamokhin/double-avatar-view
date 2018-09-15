@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.*
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.webkit.URLUtil
 import android.widget.*
 import java.net.URL
 import kotlin.concurrent.thread
@@ -95,7 +96,7 @@ constructor(context: Context, attributeSet: AttributeSet? = null, defStyleAttr: 
             firstSize + firstSize * config.vOffset + firstSize * (config.cutSizeCoeff * config.secondSizeCoeff - 1)
         )
 
-        if (config.firstImage.isNotEmpty() && config.secondImage.isNotEmpty()) {
+        if (URLUtil.isValidUrl(config.firstImage) && URLUtil.isValidUrl(config.secondImage)) {
             thread {
                 backBitmap = URL(config.firstImage).readBytes().toBitmap().cropCenter().circleCrop(firstSize.toInt())
                 frontBitmap = URL(config.secondImage).readBytes().toBitmap().cropCenter().circleCrop((firstSize * config.secondSizeCoeff).toInt())

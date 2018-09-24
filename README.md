@@ -50,6 +50,6 @@ val config = DoubleAvatarView.Config(
             0.15f,                     // vertical offset in percents of back image's height
             2f,                        // front image radius multiplier
             1.115f                     // front image's cropped background radius multiplier
-        )
+)
 dav.updateConfig(config)
 ```

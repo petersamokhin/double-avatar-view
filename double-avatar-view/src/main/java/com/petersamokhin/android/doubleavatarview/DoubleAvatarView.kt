@@ -58,15 +58,17 @@ constructor(context: Context, attributeSet: AttributeSet? = null, defStyleAttr: 
             setLayerType(LAYER_TYPE_SOFTWARE, null)
             paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.CLEAR)
 
-            context.obtainStyledAttributes(attributeSet, R.styleable.DoubleAvatarView).apply {
-                val hOffset = getFloat(R.styleable.DoubleAvatarView_horizontal_offset, DEFAULT_CONFIG.hOffset)
-                val vOffset = getFloat(R.styleable.DoubleAvatarView_vertical_offset, DEFAULT_CONFIG.vOffset)
-                val secondSizeCoeff = getFloat(R.styleable.DoubleAvatarView_second_size_coeff, DEFAULT_CONFIG.secondSizeCoeff)
-                val cutSizeCoeff = getFloat(R.styleable.DoubleAvatarView_cut_size_coeff, DEFAULT_CONFIG.cutSizeCoeff)
+            attributeSet?.also {
+                context.obtainStyledAttributes(it, R.styleable.DoubleAvatarView).apply {
+                    val hOffset = getFloat(R.styleable.DoubleAvatarView_horizontal_offset, DEFAULT_CONFIG.hOffset)
+                    val vOffset = getFloat(R.styleable.DoubleAvatarView_vertical_offset, DEFAULT_CONFIG.vOffset)
+                    val secondSizeCoeff = getFloat(R.styleable.DoubleAvatarView_second_size_coeff, DEFAULT_CONFIG.secondSizeCoeff)
+                    val cutSizeCoeff = getFloat(R.styleable.DoubleAvatarView_cut_size_coeff, DEFAULT_CONFIG.cutSizeCoeff)
 
-                config = config.copy(hOffset = hOffset, vOffset = vOffset, secondSizeCoeff = secondSizeCoeff, cutSizeCoeff = cutSizeCoeff)
+                    config = config.copy(hOffset = hOffset, vOffset = vOffset, secondSizeCoeff = secondSizeCoeff, cutSizeCoeff = cutSizeCoeff)
 
-                recycle()
+                    recycle()
+                }
             }
 
             afterLayout {
